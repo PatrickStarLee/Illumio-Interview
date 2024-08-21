@@ -8,7 +8,7 @@ Assumtions:
 - assume program only supports version 2
 - assume program supports default log formats (I am using .txt files in this demo)
 - assume the users know that the name of the files for the flow logs and lookup table and they exist
-- assume their exists a file containing the information of what decimal number is associated with what protocol where each new row has information for only one protocol (this repository already includes the csv file)
+- assume there exists a file containing the information of what decimal number is associated with what protocol where each new row has information for only one protocol (this repository already includes the csv file)
 
 Test:
 - tested the progam with the given example provided in the email
@@ -16,5 +16,5 @@ Test:
 
 Analysis:
 - program parses through the lookup table file and requires O(N) memory for the total number of key-value pairs for O(1) lookup time
-- program parses through the protocol-numbers-1.csv file and requires O(M) memory for the total number of key-value pairs for O(1) lookup time
+- program parses through the protocol-numbers-1.csv file and requires O(M) memory for the total number of key-value pairs for O(1) lookup time (the key is a tuple containing the dstport and protocol)
 - the main program requires O(L) time where L is the total number of rows in the log file to map each row to a tag
